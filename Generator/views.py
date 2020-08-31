@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
-import pyperclip
 
 # Create your views here.
 
@@ -24,7 +23,6 @@ def password(request):
     psw = ''
     for i in range(length):
         psw += random.choice(characters)
-    pyperclip.copy(psw)
     return render(request, 'generator/password.html', {'password': psw})
 
 def about(request):
