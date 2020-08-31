@@ -1,16 +1,24 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% extends 'generator/base.html' %}
 
-<title>About US</title>
-<meta charset="utf-8">
-<body>
-    <h1>About Us</h1>
-    <p>This site is designed by Priyanshu Singh. This site generates Random Password of desired length.</p>
-    <h2>Design of Site</h2>
-    <p>This site is designed on Python language using Django Framework.</p>
-    <h3>About Designer</h3>
-    <p>Priyanshu Singh is a Web Developer, Coder as well as Blogger.</p>
-    <br>
-    <hr>
-    <br>
-    <a href="{% url 'home' %}" class="btn btn-warning">Home</a>
-</body>
+{% block content %}
+
+    <title>About US</title>
+    <meta charset="utf-8">
+    <body>
+        <div class="container text-left">
+            <h1>About Us</h1>
+            <p>This site is designed by Priyanshu Singh. This site generates Random Password of desired length.</p>
+            <h2>Design of Site</h2>
+            <p>This site is completely designed on Python language using Django Framework.</p>
+            <h3>About Designer</h3>
+            <p>Priyanshu Singh is a Web Developer, Coder as well as Blogger.</p>
+            <br>
+        </div>
+        <div class="container text-center">
+            <hr>
+            <br>
+            <a href="{% url 'home' %}" class="btn btn-warning">Home</a>
+        </div>
+    </body>
+
+{% endblock %}
